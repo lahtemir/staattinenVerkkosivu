@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name = "viewport" content="with=device-width, initial-scale=1.0">
+<title>Nettisivu</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="header">
+		<nav>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+
+				<ul>
+					<li><a href=" ">HOME</a></li>
+					<li><a href=" ">BOOKING</a></li>
+					<li><a href=" ">ROOMS</a></li>
+					<li><a href=" ">BLOG</a></li>
+					<li><a href=" ">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+
+		</nav>
+	
+		
+		<div class="text-box">
+			<br><br>
+			<h1>Lorem Ipsum</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+				accumsan est non gravida cursus. Nunc condimentum est quis urna
+				tincidunt, quis elementum neque lacinia. In a tortor et diam
+				interdum semper vel quis nulla. Morbi tempus hendrerit odio.</p>
+
+			<p>Vestibulum faucibus est vel lorem pretium ultricies. Sed
+				ultrices ultricies nunc, sit amet dignissim ex mattis sed. Aenean
+				tincidunt elit ac laoreet ullamcorper. Fusce efficitur ligula vitae
+				nunc aliquet, eu consectetur nisl convallis. Nulla eu diam ut dui
+				pulvinar lacinia.</p>
+		<div class="boxLink">
+			<!-- LUE LISÄÄ -linkki -->
+			<a href="https://www.w3schools.com/html/html_links.asp"
+				target="_blank" class="lueLisaa"> Lue lisää </a>
+		</div>
+			<p>Donec vel ex magna. Nullam sit amet justo odio. Integer a arcu
+				molestie, facilisis eros at, feugiat urna. Aliquam venenatis eros
+				faucibus, maximus dui eu, maximus mi. In semper elementum volutpat.
+				Cras quis cursus purus. Cras vitae libero condimentum urna aliquet
+				molestie.Vestibulum faucibus est vel lorem pretium ultricies. Sed
+				ultrices ultricies nunc, sit amet dignissim ex mattis sed. Aenean
+				tincidunt elit ac laoreet ullamcorper.</p>
+
+
+		</div>
+	</section>
+	
+	
+ 	<section> 
+		<div class="more">
+			<h3>About Us</h3>
+			<p>Vestibulum faucibus est vel lorem pretium ultricies. Sed
+				ultrices ultricies nunc, sit amet dignissim ex mattis sed. Aenean
+				tincidunt elit ac laoreet ullamcorper. Fusce efficitur ligula vitae
+				nunc aliquet. </p>
+
+			<h3>Rooms</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Sem viverra aliquet eget sit amet tellus cras adipiscing fermentum.
+				 </p>
+
+			<h3>Booking</h3>
+			<p>Vestibulum faucibus est vel lorem pretium ultricies. Sed
+				ultrices ultricies nunc, sit amet dignissim ex mattis sed. Aenean
+				tincidunt elit ac laoreet ullamcorper. Fusce efficitur ligula vitae
+				nunc aliquet. </p>
+				
+		</div>
+		</section> 
+		
+		<hr>
+		
+		<section>
+		<div class="contact">
+		
+			
+			<!-- CONTACT linkki ja kuva -->
+			<a href="https://www.w3schools.com/html/html_links.asp"
+				target="_blank">
+				<h3>Contact us</h3>
+			</a>
+			<address>
+				p. 123 67893<br> Example.com<br> Box 564, Disneyland<br>
+				USA
+			</address>
+		</div>
+		</section>
+		
+		
+		
+		<!-- JavaScript -->
+		<script>
+		var navLinks = document.getElementById("navLinks");
+		
+		function showMenu(){
+			navLinks.style.right = "0";
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+		}
+		</script>
+	
+
+</body>
+</html>
