@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name = "viewport" content="with=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="header">
+		<nav>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+
+				<ul>
+					<li><a href="etusivu.html">HOME</a></li>
+					<li><a href=" ">BOOKING</a></li>
+					<li><a href=" ">ROOMS</a></li>
+					<li><a href="report.html">REPORT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+
+		</nav>
+
+	
+<section class="contactTextBox">
+		<div class= "contactInfo">
+		<h3>Aukioloajat: </h3>
+		ma-pe: 8-18
+		<br>la: 8-16
+		<br>su: 10-16
+		<h3>Yhteystiedot:</h3>
+		<p> p. 020 1234567
+		<br>info@sahkoposti.fi
+		<br>Testikatu 34, 33101 Tampere
+		</p>
+		</div>
+		
+		<div class="map">
+		<img src="images/map.jpg">
+		</div>
+</section>				
+		
+</section>
+
+<section>		
+		<div class="otaYhteytta">
+		<hr>
+		<br>
+		<h3>Ota yhteyttä:</h3>
+		
+	
+		<form class=lomake>
+			<label for="nimi">Nimi:</label><br>
+			<input type="text" id="nimi" name="nimi"><br>
+			
+			<label for="pnumero">Puhelinnumero:</label><br>
+			<input type="tel" id="nro" name="nro"><br>
+			
+			<label for="sposti">Sähköposti:</label><br>
+			<input type="email" id="sposti" name="sposti"><br>
+			
+			<label for="viesti">Viesti:</label><br>
+			<textarea name="viesti" rows="8" cols="80"></textarea><br>
+			
+			<input type="submit" value="Lähetä">
+		</form>
+		</div>
+</section>		
+
+
+<!-- JavaScript -->
+		<script>
+		var navLinks = document.getElementById("navLinks");
+		
+		function showMenu(){
+			navLinks.style.right = "0";
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+		}
+		</script>
+	
+
+</body>
+</html>

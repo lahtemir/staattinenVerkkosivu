@@ -5,13 +5,19 @@
 	padding: 0;
 }
 
+body  {
+	background-color: rgba(220, 220, 220, 0.49);
+	
+}
+
 .header{
 	min-height: 105vh;
 	width:100%;
-	background-image: linear-gradient(rgba(240, 240, 240, 0.8),rgba(240, 240, 240, 0.8)),url('images/coffee.jpg');
+	background-image: linear-gradient(rgba(203, 203, 203, 0.8),rgba(203, 203, 203, 0.8)),url('images/coffee.jpg');
 	background-position: center;
 	background-size: cover;
 	position: relative;
+	text-align: center;
 }
 
 
@@ -52,11 +58,9 @@ nav{
 }
 
 .text-box {
-	margin: auto;
  	width: 70%; 
 	color: Black;
 	position: absolute;
-	margin: 0;
   	top: 50%;  
  	left: 50%;  
   	transform: translate(-50%, -50%);  
@@ -69,6 +73,7 @@ nav{
 	max-height: 20%;
  	font-size: 70px; 
  	text-align: center;
+ 	margin: auto;
 
 }
 .text-box p{
@@ -111,9 +116,8 @@ nav{
 }
 
 .more {
-   	margin: auto;   
-  	margin-top: 100px;
-  	margin-bottom:100px;
+   	margin-top: 100px; 
+  	margin-bottom:100px; 
 	font-family: verdana;
 	color: black;
  	float: center; 
@@ -131,7 +135,7 @@ nav{
 .more p{
 	margin: auto;
 	font-size: 15px;
-	width: 50%;
+ 	width: 50%; 
 	text-align: center; 
 }
 
@@ -139,8 +143,8 @@ nav{
 
 .contact {
  	text-align: center;
- 	 margin-bottom: 50px; 
- 	 margin-top: 50px;
+ 	margin-bottom: 50px; 
+ 	margin-top: 50px;
  
  	
 	
@@ -177,12 +181,83 @@ nav .fa{
 	display: none;
 }
 
+
+/* CONTACT */
+
+
+
+.contactInfo {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	float: left;
+	margin-left: 20%;
+	margin-top: 8%;
+	line-height: 2;
+	
+}
+
+.contactInfo h3{
+	font-size: 30px;
+	margin-top: 10%;
+}
+
+.map img{
+ 	height: 20%;
+ 	width: 20%;
+ 	float: right;
+ 	margin-right: 25%;
+ 	margin-top: 10%;
+ 	
+	
+}
+
+.otaYhteytta {
+	float:left;
+ 	width: 80%; 
+	margin:20px;
+	margin-left:10%;
+	
+}
+
+.otaYhteytta h3{
+	font-size: 40px;
+	margin: 15px;
+
+	
+}
+label {
+	font-size: 15px;
+}
+
+input  {
+	line-height:2;
+	margin: 10px;
+	margin-bottom: 15px;
+	width: 40%;
+	}
+	
+input[type=submit]{
+	width:15%;
+	height: 30px;
+}
+
+
+
+
+
+
+
+
+
 @media(max-width: 700px){
 	
 	.header{
-		min-height: 100vh;
+		min-height: 110vh;
 	}
 	
+/* 	NAVIKOINTI */
 	.nav-links ul li {
 		display: block;
 	}
@@ -203,22 +278,25 @@ nav .fa{
 		margin: 10px;
 		font-size: 22px;
 		cursor: pointer;
+		
 	}
 	
 	.nav-links ul{
 	padding: 30px;
 	}
 
+/* 	ETUSIVU */
 	.text-box h1 {
-		font-size: 35px;
+		font-size: 37px;
+	
 	}
 	
 	.text-box p{
-	 	margin: 5px; 
-		font-size: 13px;
+		font-size: 18px;
 		color: black;
 		text-align:center;
-		width: 100%;
+		margin: 5px;
+		width: 90%;
 	}
 	
 	.more {
@@ -226,15 +304,48 @@ nav .fa{
 		column-count:1;
 	}
 	
+	.more h3 {
+		margin-bottom: 10px;
+	}
+	
 	.more p {
 	width: 90%;
+	margin-bottom: 20px;
 	}
 	
 	.lueLisaa {
 	width:70%;
 	padding: 3%;
 	border: 3px solid black;
+	margin:5px;
 	}
+	
+/* 	CONTACT */
 
+	.contactInfo {
+	width: 70%;
+	margin-left: 55px;
+	margin-bottom:20px;
+	margin-top:10px;
+	padding-right: 10px;
+	padding-left:10px;
+	}
+	
+	.map img{
+	float: left;
+	width:82%;
+	margin:10px;
+	margin-left:40px;
+	}
+	input  {
+	width: 60%;
+	}
+	
+	input[type=submit]{
+	width:15%;
+	height: 30px;
+	}
+	
+	
  } 
 
