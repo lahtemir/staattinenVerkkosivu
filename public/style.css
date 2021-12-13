@@ -27,6 +27,7 @@ nav{
 	justify-content: space-between;
 	
 }
+
 .nav-links {
 	flex: 1;
 	text-align: center;
@@ -55,6 +56,14 @@ nav{
 }
 .nav-links ul li:hover::after{
 	width: 100%
+}
+
+.openbtn{
+	display: none;
+}
+
+.closebtn{
+	display: none;
 }
 
 .text-box {
@@ -141,7 +150,7 @@ nav{
 
 
 
-.contact {
+.footer {
  	text-align: center;
  	margin-bottom: 50px; 
  	margin-top: 50px;
@@ -149,7 +158,7 @@ nav{
  	
 	
 	}
-.contact h3 {
+.footer h3 {
   	float: center;  
  	margin-top:20px; 
  	margin-bottom:20px; 
@@ -160,25 +169,22 @@ nav{
  	cursor: pointer; 
 }
 
-.contact:visited {
+.footer:visited {
 	color: Black;
 	background-color: transparent;
 	text-decoration: none;
 }
 
-.contact:hover {
+.footer:hover {
 	color: black;
 	background-color: transparent;
 	text-decoration: none;
 }
 
-.contact:active {
+.footer:active {
 	color: black;
 	background-color: transparent;
 	text-decoration: none;
-}
-nav .fa{
-	display: none;
 }
 
 
@@ -186,32 +192,37 @@ nav .fa{
 
 
 
-.contactInfo {
+.contactTextBox {
 	background-color: rgba(255, 255, 255, 0.5);
-	padding: 2%;
-	padding-left: 5%;
-	padding-right: 5%;
-	float: left;
+	width: 60%;
 	margin-left: 20%;
-	margin-top: 8%;
+	margin-top: 7%;
+	margin-bottom: 7%;
 	line-height: 2;
-	
-}
+ 	column-count:2; 
 
-.contactInfo h3{
+}
+.contactTextBox h3{
 	font-size: 30px;
-	margin-top: 10%;
+}
+.info {
+	margin-top:20%;
+	margin-bottom:10%;
+
 }
 
-.map img{
- 	height: 20%;
- 	width: 20%;
+.contactTextBox img{
+ 	height: 100%;
+ 	width: 80%;
  	float: right;
  	margin-right: 25%;
- 	margin-top: 10%;
+ 	margin-top: 20%;
+ 	margin-bottom: 20%;
+
  	
 	
 }
+
 
 .otaYhteytta {
 	float:left;
@@ -227,20 +238,32 @@ nav .fa{
 
 	
 }
-label {
+.otaYhteytta label {
 	font-size: 15px;
 }
 
-input  {
+.otaYhteytta input {
 	line-height:2;
 	margin: 10px;
 	margin-bottom: 15px;
 	width: 40%;
-	}
 	
-input[type=submit]{
-	width:15%;
+	}
+.otaYhteytta textarea{
+	line-height:2;
+	margin: 10px;
+	width: 40%;
+	height: 100px;
+}
+	
+.otaYhteytta input[type=submit]{
+	width:10%;
 	height: 30px;
+	border: 2px solid black;
+}
+
+.otaYhteytta input[type=submit]:hover{
+	background-color: slateblue;
 }
 
 
@@ -248,44 +271,76 @@ input[type=submit]{
 
 
 
-
-
-
-@media(max-width: 700px){
+@media screen and (max-width: 700px){
 	
 	.header{
-		min-height: 110vh;
+		min-height: 130vh;
+		max-width:700px;
 	}
 	
 /* 	NAVIKOINTI */
-	.nav-links ul li {
-		display: block;
-	}
-	.nav-links {
-		position:absolute;
-		background: slateblue;
-		height: 100vh;
-		width: 200px;
-		top: 0;
-		right:-200px;
-		text-align: left; 
-		z-index: 2;
-		transition: 1s;
-	}
-	nav .fa{
-		display: block;
-		color: black;
-		margin: 10px;
-		font-size: 22px;
-		cursor: pointer;
-		
-	}
 	
-	.nav-links ul{
-	padding: 30px;
-	}
+.openbtn{
+display: block;
+}
+.closebtn{
+	display: block;
+}
+.nav-links{
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: slateblue; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+ .nav-links ul li { 
+ 	float:left; 
+ 	margin-left:10px;
+ } 
+.nav-links a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #f1f1f1;
+}
+.nav-links .closebtn {
+  position: absolute;
+  top:0;
+  right: 10px;
+  font-size: 40px;
+  margin-left: 50px;
+  color: black;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+   border: none; 
+}
+#main {
+  transition: margin-left .5s; /*transition effect */ 
+  padding: 20px;
+}
+
+
 
 /* 	ETUSIVU */
+
+	.text-box {
+		width: 90%;
+		column-count:1;
+	}
 	.text-box h1 {
 		font-size: 37px;
 	
@@ -294,13 +349,11 @@ input[type=submit]{
 	.text-box p{
 		font-size: 18px;
 		color: black;
-		text-align:center;
-		margin: 5px;
-		width: 90%;
+		
 	}
 	
 	.more {
-		width: 90%;
+		width: 100%;
 		column-count:1;
 	}
 	
@@ -309,7 +362,7 @@ input[type=submit]{
 	}
 	
 	.more p {
-	width: 90%;
+	width: 75%;
 	margin-bottom: 20px;
 	}
 	
@@ -337,15 +390,24 @@ input[type=submit]{
 	margin:10px;
 	margin-left:40px;
 	}
-	input  {
-	width: 60%;
-	}
 	
-	input[type=submit]{
-	width:15%;
+	.contactTextBox {
+	column-count: 1;
+	}
+	.contactTextBox img{
+	margin: 10%;
+	}
+	.otaYhteytta input {
+	width: 80%;
+	
+	}
+	.otaYhteytta textarea{
+	width: 80%;
+}
+	.otaYhteytta input[type=submit]{
+	width:25%;
 	height: 30px;
 	}
-	
 	
  } 
 

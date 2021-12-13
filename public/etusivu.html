@@ -4,33 +4,32 @@
 <meta name = "viewport" content="with=device-width, initial-scale=1.0">
 <title>Nettisivu</title>
 <link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 <section class="header">
 		<nav>
-			<div class="nav-links" id="navLinks">
-				<i class="fa fa-times" onclick="hideMenu()"></i>
-
+			<div class="nav-links" id="navLinks" >
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<ul>
-					<li><a href="etusivu.html">HOME</a></li>
-					<li><a href=" ">BOOKING</a></li>
-					<li><a href=" ">ROOMS</a></li>
-					<li><a href="report.html">REPORT</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
+				  <li><a href="etusivu.html">HOME</a></li>
+				  <li><a href=" ">BOOKING</a></li>
+				  <li><a href=" ">ROOMS</a></li>
+				  <li><a href="report.html">REPORT</a></li>
+				  <li><a href="contact.html">CONTACT</a></li>
 				</ul>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
+			
+			<div id="main">
+			  <button class="openbtn" onclick="openNav()">&#9776</button>
+			</div>
 
 		</nav>
 	
 		
 		<div class="text-box">
 			<br><br>
-			<h1>Lorem Ipsum</h1>
+			<h1>Bed and Breakfast</h1>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
 				accumsan est non gravida cursus. Nunc condimentum est quis urna
@@ -62,8 +61,8 @@
 	
  	<section> 
 		<div class="more">
-			<h3>About Us</h3>
-			<p>Vestibulum faucibus est vel lorem pre-<br>tium ultricies. Sed
+			<h3>Report</h3>
+			<p>Vestibulum faucibus est vel lorem pretium ultricies. Sed
 				ultrices ultricies nunc, sit amet dignissim ex mattis sed. Aenean
 				tincidunt elit ac laoreet ullamcorper. Fusce efficitur ligula vitae
 				nunc aliquet. <br><br></p>
@@ -72,48 +71,47 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 				Sem viverra aliquet eget sit amet tellus cras adipiscing fermentum.
-				 </p>
+				<br><br> </p>
 
 			<h3>Booking</h3>
 			<p>Vestibulum faucibus est vel lorem pretium ultricies. Sed
 				ultrices ultricies nunc, sit amet dignissim ex mattis sed. Aenean
-				tincidunt elit ac laoreet ullam-<br>corper. Fusce efficitur ligula vitae
+				tincidunt elit ac laoreet ullamcorper. Fusce efficitur ligula vitae
 				nunc aliquet. </p>
 				
 		</div>
 		</section> 
 		
+	
+		
+		<section class="footer">
+		
 		<hr>
-		
-		<section>
-		<div class="contact">
-		
-			
 			<!-- CONTACT linkki ja kuva -->
 			<a href="contact.html">
 				<h3>Contact us</h3>
 			</a>
 			<address>
-				p. 123 67893<br> Example.com<br> Box 564, Disneyland<br>
-				USA
+				p. 020 1234567<br> info@sahkoposti.fi<br> Testikatu 34, 33101 Tampere
+				
 			</address>
-		</div>
 		</section>
 		
 		
 		
 		<!-- JavaScript -->
 		<script>
-		var navLinks = document.getElementById("navLinks");
-		
-		function showMenu(){
-			navLinks.style.right = "0";
+		/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+		function openNav() {
+		  document.getElementById("navLinks").style.width = "200px";
+		  document.getElementById("main").style.marginLeft = "200px";
 		}
-		function hideMenu(){
-			navLinks.style.right = "-200px";
+
+		/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+		function closeNav() {
+		  document.getElementById("navLinks").style.width = "0";
+		  document.getElementById("main").style.marginLeft = "0";
 		}
 		</script>
-	
-
 </body>
 </html>
